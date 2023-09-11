@@ -1,0 +1,48 @@
+{
+  "name": "eslint-config-ristretto",
+  "description": "Utility functions to merge MUI's theme into TailwindCSS",
+  "author": "just-koohii",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "config",
+    "javascript",
+    "typescript",
+    "styleguide"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/just-koohii/eslint-config-ristretto.git"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./ioc": "./dist/ioc.js"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && cp LICENSE ./dist",
+    "typecheck": "tsc -p ./tsconfig.build.json --noEmit",
+    "package": "rm ./*.tgz && npm pack",
+    "test": "vitest",
+    "test:ci": "vitest --run"
+  },
+  "devDependencies": {
+    "@types/eslint": "*",
+    "eslint": "*",
+    "tsconfig": "workspace:*",
+    "typescript": "*",
+    "vitest": "*"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.25.0",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-promise": "*"
+  }
+}

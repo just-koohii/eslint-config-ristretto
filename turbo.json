@@ -1,0 +1,22 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "cache": true
+    },
+    "lint": {},
+    "package": {
+      "dependsOn": ["build"],
+      "outputs": ["*.tgz"],
+      "cache": false
+    },
+    "typecheck": {
+      "cache": true
+    },
+    "test:ci": {
+      "cache": false
+    }
+  }
+}
