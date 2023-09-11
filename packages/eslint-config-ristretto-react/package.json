@@ -1,9 +1,9 @@
 {
   "name": "eslint-config-ristretto-react",
-  "description": "Utility functions to merge MUI's theme into TailwindCSS",
+  "description": "A Shareable ESLint Config based on AirBnB Style",
   "author": "just-koohii",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "eslint",
     "eslint-config",
