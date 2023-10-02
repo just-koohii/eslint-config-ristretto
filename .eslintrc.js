@@ -38,8 +38,7 @@ module.exports = {
         devDependencies: [
           "__tests__/**/*.ts",
           "src/**/*.spec.ts",
-          "vitest.config.ts",
-          "src/dev.ts",
+          "packages/**/vitest.config.ts",
         ],
       },
     ],
