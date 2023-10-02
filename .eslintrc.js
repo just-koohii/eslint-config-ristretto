@@ -1,3 +1,6 @@
+/**
+ * @type {import('eslint').Linter.Config}
+ */
 module.exports = {
   env: {
     es2021: true,
@@ -6,7 +9,6 @@ module.exports = {
   },
   extends: [
     require.resolve("./packages/eslint-config-ristretto/dist"),
-    "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -19,7 +21,8 @@ module.exports = {
       typescript: {},
     },
   },
-  plugins: ["@typescript-eslint", "prettier"],
+  root: true,
+  plugins: ["prettier"],
   ignorePatterns: ["node_modules", "dist", "coverage"],
   rules: {
     "prettier/prettier": [
@@ -27,14 +30,6 @@ module.exports = {
       {},
       {
         usePrettierrc: true,
-      },
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        js: "never",
-        ts: "never",
       },
     ],
     "import/no-extraneous-dependencies": [
@@ -48,9 +43,6 @@ module.exports = {
         ],
       },
     ],
-    "@typescript-eslint/no-explicit-any": "off",
-    "no-param-reassign": "off",
-    "no-console": "off",
     "import/no-import-module-exports": "off",
   },
 };

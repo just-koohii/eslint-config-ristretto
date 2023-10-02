@@ -9,8 +9,12 @@ import { variableRules } from "./rules/variables";
 import { typescriptRules } from "./rules/typescript";
 
 export const config: Linter.Config = {
-  extends: ["plugin:import/recommended", "plugin:import/typescript"],
-  plugins: ["import", "promise"],
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+  ],
+  plugins: ["@typescript-eslint", "import", "promise"],
   settings: {
     "import/extensions": [".js", ".mjs", ".ts"],
     "import/ignore": ["node_modules", "dist", "build", "coverage"],
