@@ -30,5 +30,3 @@ export const reactA11yRules: Linter.RulesRecord = {
   // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
   "jsx-a11y/img-redundant-alt": "error",
 };
-
-module.exports = reactA11yRules

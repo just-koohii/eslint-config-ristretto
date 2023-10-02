@@ -439,4 +439,3 @@ export const bestPracticesRules: Linter.RulesRecord = {
   // https://eslint.org/docs/rules/yoda
   yoda: "error",
 };
-

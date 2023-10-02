@@ -516,7 +516,5 @@ export const reactRules: Linter.RulesRecord = {
 
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/66b58dd4864678eb869a7bf434c72ff7ac530eb1/docs/rules/sort-default-props.md
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/66b58dd4864678eb869a7bf434c72ff7ac530eb1/docs/rules/sort-default-props.md
-  "react/sort-default-props": "off"
+  "react/sort-default-props": "off",
 };
-
-module.exports = reactRules

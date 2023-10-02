@@ -2,7 +2,6 @@ import { ESLint } from "eslint";
 import { config } from "../src";
 import { iocConfig } from "../src/ioc";
 
-
 describe("config", () => {
   it("loads default config correctly", async () => {
     const eslint = new ESLint({ overrideConfig: config });
