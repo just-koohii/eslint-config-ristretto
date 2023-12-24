@@ -29,9 +29,6 @@ export const variableRules: Linter.RulesRecord = {
     },
   ],
 
-  // disallow declaration of variables already declared in the outer scope
-  "no-shadow": "error",
-
   // disallow shadowing of names such as arguments
   "no-shadow-restricted-names": "error",
 
