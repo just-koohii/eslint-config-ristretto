@@ -3,7 +3,7 @@
   "description": "A Shareable ESLint Config based on AirBnB Style",
   "author": "just-koohii",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "eslint",
     "eslint-config",
@@ -29,7 +29,8 @@
     "typecheck": "tsc -p ./tsconfig.build.json --noEmit",
     "package": "rm -f ./*.tgz && npm pack",
     "test": "vitest",
-    "test:ci": "vitest --run"
+    "test:ci": "vitest --run",
+    "publishpkg": "pnpm publish"
   },
   "devDependencies": {
     "@types/eslint": "*",
@@ -41,8 +42,9 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
-    "eslint": "^8.25.0",
+    "eslint": "*",
     "eslint-plugin-import": "*",
-    "eslint-plugin-promise": "*"
+    "eslint-plugin-promise": "*",
+    "eslint-import-resolver-typescript": "*"
   }
 }

@@ -18,6 +18,11 @@ export const config: Linter.Config = {
   settings: {
     "import/extensions": [".js", ".mjs", ".ts"],
     "import/ignore": ["node_modules", "dist", "build", "coverage"],
+    "import/resolver": {
+      typescript: {
+        project: ".",
+      },
+    },
   },
   rules: {
     ...bestPracticesRules,

@@ -3,7 +3,7 @@
   "description": "A Shareable ESLint Config based on AirBnB Style",
   "author": "just-koohii",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "eslint",
     "eslint-config",
@@ -26,7 +26,8 @@
     "typecheck": "tsc -p ./tsconfig.build.json --noEmit",
     "package": "rm -f ./*.tgz && npm pack",
     "test": "vitest",
-    "test:ci": "vitest --run"
+    "test:ci": "vitest --run",
+    "publishpkg": "pnpm publish"
   },
   "dependencies": {
     "eslint-config-ristretto": "workspace:*"
@@ -50,6 +51,7 @@
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-promise": "*",
     "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks":  "*"
+    "eslint-plugin-react-hooks":  "*",
+    "eslint-import-resolver-typescript": "*"
   }
 }

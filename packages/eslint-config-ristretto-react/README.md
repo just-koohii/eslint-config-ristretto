@@ -15,19 +15,19 @@ Install **eslint-config-ristretto-react** and the required peer-dependencies:
 **npm:**
 
 ```bash
-npm i -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks
+npm i -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-typescript
 ```
 
 **yarn:**
 
 ```bash
-yarn add -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks
+yarn add -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-typescript
 ```
 
 **pnpm:**
 
 ```bash
-pnpm i -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks
+pnpm i -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-typescript
 ```
 
 ## Usage

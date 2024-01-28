@@ -15,19 +15,19 @@ Install **eslint-config-ristretto** and the required peer-dependencies:
 **npm:**
 
 ```bash
-npm i -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise
+npm i -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise eslint-import-resolver-typescript
 ```
 
 **yarn:**
 
 ```bash
-yarn add -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise
+yarn add -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise eslint-import-resolver-typescript
 ```
 
 **pnpm:**
 
 ```bash
-pnpm i -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise
+pnpm i -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise eslint-import-resolver-typescript
 ```
 
 ## Usage

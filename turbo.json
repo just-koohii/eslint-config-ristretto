@@ -12,6 +12,10 @@
       "outputs": ["*.tgz"],
       "cache": false
     },
+    "publishpkg": {
+      "dependsOn": ["build"],
+      "cache": false
+    },
     "typecheck": {
       "cache": true
     },
