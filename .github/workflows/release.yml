@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - "master"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Publish release
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: latest
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        if: contains(github.event.head_commit.message, 'release')
+        run: pnpm build
+
+      - name: Publis
+        if: contains(github.event.head_commit.message, 'release')
+        run: pnpm publishpkg -- dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
