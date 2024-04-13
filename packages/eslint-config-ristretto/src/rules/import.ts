@@ -254,7 +254,7 @@ export const importRules: Linter.RulesRecord = {
 
   // enforce a consistent style for type specifiers (inline or top-level)
   // https://github.com/import-js/eslint-plugin-import/blob/d5fc8b670dc8e6903dbb7b0894452f60c03089f5/docs/rules/consistent-type-specifier-style.md
-  "import/consistent-type-specifier-style": ["error", "prefer-inline"],
+  "import/consistent-type-specifier-style": "off",
 
   // Reports the use of empty named import blocks.
   // https://github.com/import-js/eslint-plugin-import/blob/d5fc8b670dc8e6903dbb7b0894452f60c03089f5/docs/rules/no-empty-named-blocks.md
