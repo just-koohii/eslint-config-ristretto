@@ -4,7 +4,7 @@ import { iocConfig } from "../src/ioc";
 
 describe("config", () => {
   it("loads default config correctly", async () => {
-    const eslint = new ESLint({ overrideConfig: config });
+    const eslint = new ESLint({ overrideConfig: config, useEslintrc: false });
 
     const code = "const foo = 1;\nconst bar = () => {};\nbar(foo);\n";
 

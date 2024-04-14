@@ -8,31 +8,38 @@
 
 This package provides Ristretto's base .eslintrc (without React plugins) as an extensible shared config.
 
+## Features
+- Updated AirBnB rules
+- @typescript-eslint
+- eslint-plugin-import
+- eslint-plugin-promise
+- eslint-import-resolver-typescript (used for tsconfig paths)
+
 ## Installation
 
-Install **eslint-config-ristretto** and the required peer-dependencies:
+Install **eslint-config-ristretto** with your package manager of choice:
 
 **npm:**
 
 ```bash
-npm i -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise eslint-import-resolver-typescript
+npm i -D eslint eslint-config-ristretto
 ```
 
 **yarn:**
 
 ```bash
-yarn add -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise eslint-import-resolver-typescript
+yarn add -D eslint eslint-config-ristretto
 ```
 
 **pnpm:**
 
 ```bash
-pnpm i -D eslint eslint-config-ristretto eslint-plugin-import eslint-plugin-promise eslint-import-resolver-typescript
+pnpm i -D eslint eslint-config-ristretto
 ```
 
 ## Usage
 
-Once you have installed the packages, add `"ristretto"` to your .eslintrc `extends` array:
+Once you have installed the package, add `"ristretto"` to your .eslintrc `extends` array:
 
 ```json
 {
@@ -44,22 +51,22 @@ Once you have installed the packages, add `"ristretto"` to your .eslintrc `exten
 
 ```json
 {
-  "env": {
-    "es2021": true,
-    "node": true
-  },
+
   "extends": [
     "ristretto",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:prettier/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["prettier"],
   "ignorePatterns": ["node_modules"],
-  "rules": {}
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true,
+      },
+    ]
+  }
 }
 ```
 ----
@@ -83,15 +90,18 @@ If your project uses any type IoC (e.g. [NestJs]("https://github.com/nestjs/nest
   "extends": [
     "ristretto",
     "ristretto/ioc",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:prettier/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["prettier"],
   "ignorePatterns": ["node_modules"],
-  "rules": {}
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true,
+      },
+    ]
+  }
 }
 ```

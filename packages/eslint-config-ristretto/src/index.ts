@@ -9,6 +9,15 @@ import { variableRules } from "./rules/variables";
 import { typescriptRules } from "./rules/typescript";
 
 export const config: Linter.Config = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  env: {
+    es2021: true,
+    node: true,
+  },
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
@@ -17,7 +26,7 @@ export const config: Linter.Config = {
   plugins: ["@typescript-eslint", "import", "promise"],
   settings: {
     "import/extensions": [".js", ".mjs", ".ts"],
-    "import/ignore": ["node_modules", "dist", "build", "coverage"],
+    "import/ignore": ["node_modules", "dist", "build", "coverage", "html"],
     "import/resolver": {
       typescript: {
         project: ".",

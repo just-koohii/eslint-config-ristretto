@@ -22,36 +22,25 @@
   ],
   "main": "./dist/index.js",
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && cp LICENSE ./dist",
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json",
     "typecheck": "tsc -p ./tsconfig.build.json --noEmit",
-    "package": "rm -f ./*.tgz && npm pack",
     "test": "vitest",
-    "test:ci": "vitest --run",
-    "publishpkg": "pnpm publish"
+    "test:ci": "vitest --run"
   },
   "dependencies": {
-    "eslint-config-ristretto": "workspace:*"
+    "eslint-config-ristretto": "workspace:*",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
-    "@types/eslint": "*",
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
-    "eslint": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-promise": "*",
+    "@types/eslint": "^8.56.9",
+    "eslint": "^8.57.0",
     "tsconfig": "workspace:*",
-    "typescript": "*",
-    "vitest": "*"
+    "typescript": "^5.4.5",
+    "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
-    "eslint": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-jsx-a11y": "*",
-    "eslint-plugin-promise": "*",
-    "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks":  "*",
-    "eslint-import-resolver-typescript": "*"
+    "eslint": "^8.25.0"   
   }
 }

@@ -8,31 +8,37 @@
 
 This package provides Ristretto's .eslintrc with React plugins as an extensible shared config.
 
+## Features
+- eslint-config-ristretto
+- eslint-plugin-react
+- eslint-plugin-react-hooks
+- eslint-plugin-jsx-a11y
+
 ## Installation
 
-Install **eslint-config-ristretto-react** and the required peer-dependencies:
+Install **eslint-config-ristretto-react** with your package manager of choice:
 
 **npm:**
 
 ```bash
-npm i -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-typescript
+npm i -D eslint eslint-config-ristretto-react
 ```
 
 **yarn:**
 
 ```bash
-yarn add -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-typescript
+yarn add -D eslint eslint-config-ristretto-react
 ```
 
 **pnpm:**
 
 ```bash
-pnpm i -D eslint eslint-config-ristretto-react eslint-plugin-import eslint-plugin-promise eslint-plugin-jsx-a11y eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-typescript
+pnpm i -D eslint eslint-config-ristretto-react
 ```
 
 ## Usage
 
-Once you have installed the packages, add `"ristretto-react"` to your .eslintrc `extends` array:
+Once you have installed the package, add `"ristretto-react"` to your .eslintrc `extends` array:
 
 ```json
 {
@@ -44,26 +50,23 @@ Once you have installed the packages, add `"ristretto-react"` to your .eslintrc 
 
 ```json
 {
-  "env": {
-    "es2021": true,
-    "node": true,
-    "browser": true
-  },
   "extends": [
     "ristretto-react",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:prettier/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2021,
-    "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["prettier"],
   "ignorePatterns": ["node_modules"],
-  "rules": {}
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true,
+      },
+    ]
+  }
 }
 ```

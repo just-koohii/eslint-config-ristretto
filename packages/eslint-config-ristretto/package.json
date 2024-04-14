@@ -25,26 +25,26 @@
     "./ioc": "./dist/ioc.js"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && cp LICENSE ./dist",
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json",
     "typecheck": "tsc -p ./tsconfig.build.json --noEmit",
-    "package": "rm -f ./*.tgz && npm pack",
     "test": "vitest",
-    "test:ci": "vitest --run",
-    "publishpkg": "pnpm publish"
+    "test:ci": "vitest --run"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-promise": "^6.1.1"
   },
   "devDependencies": {
-    "@types/eslint": "*",
-    "eslint": "*",
+    "@types/eslint": "^8.56.9",
+    "eslint": "^8.57.0",
     "tsconfig": "workspace:*",
-    "typescript": "*",
-    "vitest": "*"
+    "typescript": "^5.4.5",
+    "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
-    "eslint": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-promise": "*",
-    "eslint-import-resolver-typescript": "*"
+    "eslint": "^8.25.0"
   }
 }

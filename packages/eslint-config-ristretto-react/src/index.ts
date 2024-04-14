@@ -15,9 +15,10 @@ export const config: Linter.Config = {
   env: {
     es2021: true,
     browser: true,
+    node: true,
   },
   extends: ["eslint-config-ristretto"],
-  plugins: ["@typescript-eslint", "jsx-a11y", "react-hooks", "react"],
+  plugins: ["jsx-a11y", "react-hooks", "react"],
   settings: {
     react: {
       version: "detect",
