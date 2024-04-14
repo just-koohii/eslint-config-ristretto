@@ -35,7 +35,6 @@ jobs:
         run: pnpm typecheck
 
       - name: Build
-        if: contains(github.event.head_commit.message, 'release')
         run: pnpm build
 
       - name: Test
